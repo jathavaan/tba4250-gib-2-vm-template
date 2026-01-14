@@ -14,7 +14,7 @@
       - db
 
   db:
-    image: docker.io/library/postgis/postgis:16-3.4
+    image: docker.io/postgis/postgis:16-3.4
     env_file:
       - .env
     ports:
