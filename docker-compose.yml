@@ -1,20 +1,20 @@
 ﻿services:
   client:
-    image: jathavaan/tba4250-gib-2-client:latest
+    image: docker.io/jathavaan/tba4250-gib-2-client:latest
     ports:
       - "80:80"
     depends_on:
       - server
 
   server:
-    image: jathavaan/tba4250-gib-2-server:latest
+    image: docker.io/jathavaan/tba4250-gib-2-server:latest
     ports:
       - "5000:5000"
     depends_on:
       - db
 
   db:
-    image: postgres:16
+    image: docker.io/library/postgis/postgis:16-3.4
     env_file:
       - .env
     ports:
